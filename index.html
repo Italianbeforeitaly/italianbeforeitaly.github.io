@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Italian Before Italy · Lessons</title>
+<meta name="description" content="Private online Italian lessons with Pietro, a native speaker fluent in English. Personal learning plans, 30, 60 or 120 minute lessons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, confident, personal; a tutor you'd trust, not an app
+   IDEA: an Italian postcard: the trip you're learning for
+   PICTURE: postcard with an espresso cup and a "Ciao!" speech bubble
+   COLOUR and TYPE: Italian blue field, white, tomato red accent; Archivo bold + Inter
+   LAYOUT: full-bleed blue hero, calm white bands, prices as a clean list, Instagram DM contact */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0d1530);--ink:light-dark(#121a33,#eef1fa);--mute:light-dark(#4b5470,#b4bbd2);
+--blue:#1f43a8;--blue-d:#173282;--soft:light-dark(#f2f5fc,#141e40);--line:light-dark(#dfe4f0,#28345c);
+--red:#e2482d;--card:light-dark(#ffffff,#121c3b)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Archivo,Inter,sans-serif;line-height:1.05;text-wrap:balance;margin:0}
+h2{font-size:clamp(32px,4.4vw,48px);font-weight:800;letter-spacing:-.01em}
+h3{font-size:20px;font-weight:700;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto}
+.band{padding:clamp(56px,7vw,104px) max(5vw,18px)}
+.lead{font-size:17px;color:var(--mute);max-width:62ch}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit;white-space:nowrap}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#c93a21}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.ig{width:20px;height:20px;flex:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:var(--blue);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,18px);flex-wrap:wrap}
+.logo{font-family:Archivo,sans-serif;font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.01em}
+.logo span{color:#ffd9cf}
+.links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;font-size:15px}
+.links a{text-decoration:none;opacity:.92}.links a:hover{opacity:1;text-decoration:underline}
+.links .iglink{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+
+/* hero */
+.hero{background:var(--blue);color:#fff;padding:clamp(40px,6vw,88px) max(5vw,18px) clamp(56px,7vw,104px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero h1{font-size:clamp(40px,6vw,68px);font-weight:800;letter-spacing:-.02em}
+.hero p.sub{font-size:19px;line-height:1.55;color:#dfe6fb;margin-top:22px;max-width:34ch}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero .facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);font-size:15px;color:#dfe6fb}
+.hero .facts b{color:#fff;font-weight:600}
+.card-svg{width:100%;height:auto;display:block;filter:drop-shadow(0 24px 40px rgba(5,15,50,.35))}
+.steam{animation:rise 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.steam.s2{animation-delay:1.2s}
+@keyframes rise{0%{opacity:0;transform:translateY(8px)}40%{opacity:.85}100%{opacity:0;transform:translateY(-14px)}}
+@media(prefers-reduced-motion:reduce){.steam{animation:none;opacity:.7}html{scroll-behavior:auto}}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.photo{aspect-ratio:4/5;border-radius:18px;background:var(--soft);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.photo .init{width:120px;height:120px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font:800 54px Archivo,sans-serif}
+.about .text{display:flex;flex-direction:column;gap:18px;font-size:17px;max-width:64ch}
+.sign{font:700 22px Archivo,sans-serif;color:var(--blue)}
+:root[data-theme=dark] .sign{color:#9fb5f5}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .sign{color:#9fb5f5}}
+
+/* who */
+.soft{background:var(--soft)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:44px}
+.who{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.who p{color:var(--mute);margin-top:10px;font-size:15.5px}
+.who svg{width:36px;height:36px;color:var(--red);margin-bottom:14px}
+.incl{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:32px;margin-top:56px;align-items:start}
+.incl ul{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.incl li{display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
+.incl li svg{flex:none;width:22px;height:22px;color:var(--blue);margin-top:2px}
+
+/* prices */
+.prices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(32px,5vw,72px)}
+.plist h3{font-size:15px;font-family:Inter,sans-serif;font-weight:600;color:var(--mute);margin:0 0 6px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
+.row:first-of-type{border-top:2px solid var(--ink)}
+.row .n{font-weight:600;font-size:18px}.row .d{font-size:15px;color:var(--mute);margin-top:2px}
+.row .p{font:800 30px Archivo,sans-serif;white-space:nowrap;text-align:right}
+.row.hi .p{color:var(--red)}
+.tag{display:inline-block;margin-left:8px;font-size:12.5px;font-weight:600;background:var(--red);color:#fff;border-radius:999px;padding:2px 10px;vertical-align:2px}
+.plist+.plist{margin-top:44px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+.step{border-top:3px solid var(--blue);padding-top:20px}
+:root[data-theme=dark] .step{border-color:#9fb5f5}
+.step p{color:var(--mute);margin-top:10px}
+
+/* faq */
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{cursor:pointer;list-style:none;padding:20px 40px 20px 0;font-weight:600;font-size:18px;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:16px;font:500 26px Archivo,sans-serif;color:var(--red)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;color:var(--mute);max-width:66ch}
+
+/* contact */
+.contact{background:var(--blue);color:#fff}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(32px,5vw,72px)}
+.contact .lead{color:#dfe6fb}
+form{background:#fff;color:#121a33;border-radius:18px;padding:clamp(22px,3vw,34px);display:grid;gap:16px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+label{display:grid;gap:6px;font-size:14px;font-weight:600;color:#33405f}
+input,select,textarea{font:16px Inter,sans-serif;color:#121a33;background:#f6f8fd;border:1px solid #cdd5e8;border-radius:10px;padding:12px 14px;min-height:48px;width:100%}
+textarea{resize:vertical;min-height:110px}
+.note{font-size:14px;color:#4b5470}
+.ok{display:none;background:#eaf6ee;color:#14532d;border-radius:10px;padding:14px;font-size:15px}
+.ok.show{display:block}
+.handle{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:18px;text-decoration:none;margin-top:8px}
+.handle:hover{text-decoration:underline}
+
+footer{padding:28px max(5vw,18px);font-size:14px;color:var(--mute)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+
+@media(max-width:900px){
+.hero .wrap,.about,.prices,.incl,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.about .photo{max-width:320px}
+.links a:not(.iglink){display:none}
+}
+@media(max-width:600px){
+.grid4,.steps,.two{grid-template-columns:minmax(0,1fr)}
+.hero .art{order:-1;max-width:420px}
+.hero .wrap{gap:28px}
+.row .p{font-size:26px}
+.btn{white-space:normal}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+<symbol id="check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7.5 12.5l3 3 6-6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<nav aria-label="Main">
+<div class="wrap">
+<a class="logo" href="#top">Italian <span>Before</span> Italy</a>
+<div class="links">
+<a href="#about">About</a>
+<a href="#lessons">Lessons</a>
+<a href="#prices">Prices</a>
+<a href="#faq">FAQ</a>
+<a class="iglink" href="https://www.instagram.com/italianbeforeitaly/" target="_blank" rel="noopener" aria-label="Italian Before Italy on Instagram"><svg class="ig" aria-hidden="true"><use href="#ig"/></svg><span>@italianbeforeitaly</span></a>
+</div>
+</div>
+</nav>
+
+<header class="hero" id="top">
+<div class="wrap">
+<div>
+<h1>Speak Italian before you get to Italy.</h1>
+<p class="sub">Private online lessons with Pietro, a native Italian speaker who is fluent in English. A plan built around you, from your first "ciao" to real conversations.</p>
+<div class="ctas">
+<a class="btn btn-red" href="#contact">Book a free intro call</a>
+<a class="btn btn-line" href="https://www.instagram.com/italianbeforeitaly/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#ig"/></svg>Follow on Instagram</a>
+</div>
+<div class="facts"><span><b>Native</b> Italian</span><span><b>Fluent</b> English</span><span><b>University</b> tutor</span><span><b>Live</b> 1-to-1 video</span></div>
+</div>
+<div class="art">
+<svg class="card-svg" viewBox="0 0 520 380" role="img" aria-label="An Italian postcard with an espresso cup and a speech bubble saying Ciao">
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#f3efe4"/></linearGradient>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd7a8"/><stop offset="1" stop-color="#ffb48a"/></linearGradient>
+<linearGradient id="cup" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#eef1f7"/><stop offset="1" stop-color="#d4dbe9"/></linearGradient>
+</defs>
+<g transform="rotate(-3 260 190)">
+<rect x="20" y="20" width="480" height="340" rx="14" fill="url(#paper)"/>
+<rect x="44" y="44" width="250" height="292" rx="8" fill="url(#sky)"/>
+<circle cx="214" cy="118" r="34" fill="#ffe9c9" opacity=".9"/>
+<path d="M44 250 C90 220 130 232 170 214 C210 198 250 214 294 196 V336 H44 Z" fill="#e88a5a"/>
+<g fill="#c4623b">
+<rect x="70" y="200" width="44" height="80" rx="2"/><rect x="118" y="182" width="36" height="98" rx="2"/>
+<rect x="128" y="160" width="16" height="24"/><path d="M128 160 L136 146 L144 160 Z"/>
+<rect x="160" y="210" width="56" height="70" rx="2"/><rect x="220" y="196" width="40" height="84" rx="2"/>
+</g>
+<g fill="#fde3c8" opacity=".85">
+<rect x="80" y="214" width="8" height="12"/><rect x="96" y="214" width="8" height="12"/><rect x="80" y="236" width="8" height="12"/><rect x="96" y="236" width="8" height="12"/>
+<rect x="128" y="198" width="7" height="12"/><rect x="140" y="198" width="7" height="12"/><rect x="170" y="224" width="8" height="12"/><rect x="186" y="224" width="8" height="12"/><rect x="202" y="224" width="8" height="12"/><rect x="230" y="210" width="8" height="12"/><rect x="244" y="210" width="8" height="12"/>
+</g>
+<path d="M44 280 H294 V336 H44 Z" fill="#1f43a8"/>
+<path d="M44 290 Q90 282 140 292 T240 290 T294 288" stroke="#5f80d6" stroke-width="3" fill="none"/>
+<line x1="322" y1="60" x2="322" y2="320" stroke="#d9d2c2" stroke-width="2"/>
+<rect x="420" y="52" width="58" height="70" rx="3" fill="none" stroke="#e2482d" stroke-width="2" stroke-dasharray="4 3"/>
+<rect x="428" y="60" width="42" height="54" fill="#1f43a8"/>
+<path d="M428 114 L449 84 L470 114 Z" fill="#ffffff" opacity=".9"/>
+<g stroke="#cfc6b3" stroke-width="2"><line x1="344" y1="236" x2="478" y2="236"/><line x1="344" y1="266" x2="478" y2="266"/><line x1="344" y1="296" x2="478" y2="296"/></g>
+<text x="344" y="190" font-family="Archivo, sans-serif" font-weight="800" font-size="26" fill="#1f43a8">Saluti</text>
+<text x="344" y="214" font-family="Archivo, sans-serif" font-weight="800" font-size="26" fill="#1f43a8">dall'Italia</text>
+</g>
+<g>
+<ellipse cx="380" cy="352" rx="92" ry="14" fill="#0b1d5a" opacity=".25"/>
+<ellipse cx="380" cy="340" rx="84" ry="16" fill="#e9edf6"/>
+<ellipse cx="380" cy="336" rx="84" ry="14" fill="#ffffff"/>
+<path d="M330 270 H430 L420 330 Q380 346 340 330 Z" fill="url(#cup)"/>
+<path d="M428 284 q30 0 26 24 q-4 18 -30 18" fill="none" stroke="#e1e6f1" stroke-width="10" stroke-linecap="round"/>
+<ellipse cx="380" cy="270" rx="50" ry="10" fill="#5a3420"/>
+<ellipse cx="372" cy="268" rx="22" ry="4" fill="#8a5a3a" opacity=".8"/>
+<path d="M330 270 L340 330" stroke="#ffffff" stroke-width="3" opacity=".8"/>
+<path class="steam" d="M366 252 c-10 -14 8 -20 -2 -36" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+<path class="steam s2" d="M394 252 c-10 -14 8 -20 -2 -36" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".8"/>
+</g>
+<g transform="translate(18 0)">
+<path d="M30 10 H170 Q186 10 186 26 V74 Q186 90 170 90 H86 L62 112 L66 90 H30 Q14 90 14 74 V26 Q14 10 30 10 Z" fill="#e2482d"/>
+<text x="100" y="64" text-anchor="middle" font-family="Archivo, sans-serif" font-weight="800" font-size="36" fill="#ffffff">Ciao!</text>
+</g>
+</svg>
+</div>
+</div>
+</header>
+
+<section class="band" id="about">
+<div class="wrap about">
+<div class="photo" id="photo"><img src="pietro.jpg" alt="Pietro, smiling, in a blue shirt by a window" width="800" height="999" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<div class="text">
+<h2>Ciao, I'm Pietro.</h2>
+<p>I was born and raised in Italy and lived there for 19 years. For more than two years now I've been studying at a university in the United States, so Italian is my native language and I speak English fluently every day.</p>
+<p>That's what makes my lessons different. I know the Italian people really speak at the bar, on the train and around the dinner table, and I've been through learning a second language myself. I know where English speakers get stuck, and I can explain why Italian works the way it does, in plain English, without turning the lesson into a grammar lecture.</p>
+<p>I already tutor students at my university. Through Italian Before Italy I teach private video lessons to anyone who wants to learn, wherever you are.</p>
+<p class="sign">A presto, Pietro</p>
+</div>
+</div>
+</section>
+
+<section class="band soft" id="lessons">
+<div class="wrap">
+<h2>Lessons built around you</h2>
+<p class="lead" style="margin-top:16px">There's no fixed course. After our free intro call I write you a personal learning plan, and every lesson follows it, adjusted as you improve.</p>
+<div class="grid4">
+<div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-3-3-6 2-6-5-2 1 4 6-4 1-2-2-1 1 2 4z"/><path d="M3 21h18"/></svg><h3>Travel</h3><p>Ordering, asking for directions, buying tickets, small talk. The phrases you'll actually use on your trip.</p></div>
+<div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/><path d="M14.5 14.6c.8-.4 1.6-.6 2.5-.6 2.8 0 5 2 5 5"/></svg><h3>Family and heritage</h3><p>Talk with Italian relatives and connect with where your family comes from.</p></div>
+<div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8l10-5 10 5-10 5z"/><path d="M6 10v5c0 2 3 3.5 6 3.5s6-1.5 6-3.5v-5"/></svg><h3>School and exams</h3><p>Help with university Italian courses, homework and oral exams.</p></div>
+<div class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><h3>Conversation</h3><p>Already know some Italian? Build fluency by talking about the things you enjoy.</p></div>
+</div>
+<div class="incl">
+<h3 style="font-size:clamp(24px,2.6vw,30px)">Every lesson includes</h3>
+<ul>
+<li><svg aria-hidden="true"><use href="#check"/></svg>A personal learning plan, updated as you improve</li>
+<li><svg aria-hidden="true"><use href="#check"/></svg>Live video on Zoom or Google Meet, at times that suit your time zone</li>
+<li><svg aria-hidden="true"><use href="#check"/></svg>Notes after each lesson with new words and corrections</li>
+<li><svg aria-hidden="true"><use href="#check"/></svg>Materials and practice exercises at no extra cost</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="band" id="prices">
+<div class="wrap prices">
+<div>
+<h2>Prices</h2>
+<p class="lead" style="margin-top:16px">Your first 20-minute call is free. Prices are in US dollars, with euro prices on request.</p>
+<p class="lead" style="margin-top:14px">Package hours can be used in any lesson length.</p>
+</div>
+<div>
+<div class="plist">
+<h3>Single lessons</h3>
+<div class="row"><div><div class="n">30 minutes</div><div class="d">Quick practice, questions, busy weeks</div></div><div class="p">$25</div></div>
+<div class="row hi"><div><div class="n">60 minutes <span class="tag">Most popular</span></div><div class="d">The standard lesson</div></div><div class="p">$42</div></div>
+<div class="row"><div><div class="n">2 hours</div><div class="d">Intensive sessions and exam preparation</div></div><div class="p">$80</div></div>
+</div>
+<div class="plist">
+<h3>Packages</h3>
+<div class="row"><div><div class="n">5 hours</div><div class="d">$40 per hour · valid for 2 months</div></div><div class="p">$200</div></div>
+<div class="row"><div><div class="n">10 hours</div><div class="d">$38 per hour · valid for 4 months · message support between lessons</div></div><div class="p">$380</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band soft">
+<div class="wrap">
+<h2>How booking works</h2>
+<div class="steps">
+<div class="step"><h3>Send me a message</h3><p>Fill in the form below or write to me on Instagram. We'll set up your free 20-minute intro call.</p></div>
+<div class="step"><h3>We plan together</h3><p>On the call we check your level, talk about your goals, and choose lesson length, frequency and times.</p></div>
+<div class="step"><h3>Pay with a secure link</h3><p>I send you a payment link before each lesson or package. Pay by card, Apple Pay or Google Pay in under a minute.</p></div>
+</div>
+</div>
+</section>
+
+<section class="band" id="faq">
+<div class="wrap" style="max-width:860px">
+<h2 style="margin-bottom:36px">Questions</h2>
+<details><summary>I've never studied Italian. Can I start with you?</summary><p>Of course. Beginners are very welcome. I explain everything in English at first and bring in more Italian as you get comfortable.</p></details>
+<details><summary>How often should I have lessons?</summary><p>Most students do one or two 60-minute lessons a week. We'll decide together on the intro call based on your goals and schedule.</p></details>
+<details><summary>What do I need for a lesson?</summary><p>A computer or tablet with a camera and microphone and a stable internet connection. I send everything else.</p></details>
+<details><summary>Can I cancel or reschedule?</summary><p>Yes, for free with at least 24 hours' notice. Lessons cancelled later, or missed, are charged in full.</p></details>
+<details><summary>Do the package hours expire?</summary><p>The 5-hour package is valid for 2 months and the 10-hour package for 4 months from purchase.</p></details>
+</div>
+</section>
+
+<section class="band contact" id="contact">
+<div class="wrap">
+<div>
+<h2>Iniziamo? Let's begin.</h2>
+<p class="lead" style="margin-top:16px">Tell me a little about yourself and I'll get back to you within 24 hours to set up your free intro call.</p>
+<p class="lead" style="margin-top:22px">Prefer Instagram? Send me a message directly:</p>
+<a class="handle" href="https://ig.me/m/italianbeforeitaly" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#ig"/></svg>@italianbeforeitaly</a>
+</div>
+<form id="f" novalidate>
+<div class="two">
+<label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+<label for="level">Your Italian level<select id="level" name="level"><option>Complete beginner</option><option>I know the basics</option><option>Intermediate</option><option>Advanced</option></select></label>
+</div>
+<div class="two">
+<label for="len">Lesson length<select id="len" name="len"><option>Not sure yet</option><option>30 minutes</option><option>60 minutes</option><option>2 hours</option><option>A package</option></select></label>
+<label for="tz">Your time zone or city<input id="tz" name="tz" placeholder="e.g. New York"></label>
+</div>
+<label for="goal">Your goals and when you're usually free<textarea id="goal" name="goal" placeholder="e.g. I'm going to Rome in June and want to order food and chat with locals. Free weekday evenings."></textarea></label>
+<button class="btn btn-red" type="submit" style="justify-self:start">Copy message and open Instagram</button>
+<p class="note">Your message is copied for you. Paste it into the Instagram chat that opens and send it.</p>
+<div class="ok" id="ok" role="status"></div>
+</form>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<span>© 2026 Italian Before Italy · Online Italian lessons with Pietro</span>
+<a class="handle" style="font-size:15px;margin:0" href="https://www.instagram.com/italianbeforeitaly/" target="_blank" rel="noopener"><svg class="ig" aria-hidden="true"><use href="#ig"/></svg>@italianbeforeitaly</a>
+</div>
+</footer>
+
+<script>
+{
+  const f = document.getElementById('f');
+  const ok = document.getElementById('ok');
+  const v = id => document.getElementById(id).value.trim();
+  f.addEventListener('submit', async e => {
+    e.preventDefault();
+    const msg = [
+      'Ciao Pietro! I would like to book a free intro call.',
+      'Name: ' + (v('name') || '-'),
+      'Level: ' + v('level'),
+      'Lesson length: ' + v('len'),
+      'Time zone: ' + (v('tz') || '-'),
+      'Goals and availability: ' + (v('goal') || '-')
+    ].join('\n');
+    let copied = false;
+    try { await navigator.clipboard.writeText(msg); copied = true; } catch (err) {}
+    ok.textContent = copied
+      ? 'Message copied. Paste it in the Instagram chat to @italianbeforeitaly and press send.'
+      : 'Copy this and send it to @italianbeforeitaly on Instagram:\n\n' + msg;
+    ok.style.whiteSpace = 'pre-line';
+    ok.classList.add('show');
+    const a = document.createElement('a');
+    a.href = 'https://ig.me/m/italianbeforeitaly';
+    a.target = '_blank'; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+}
+</script>
+</body>
+</html>
